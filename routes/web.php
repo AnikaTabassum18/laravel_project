@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 Route::get('contact','ContactController@contact');
 Route::get('home','HomeController@home');
+Route::get('create-user','UserController@create');
+Route::get('user','UserController@index');
+Route::get('user/{id}','UserController@show');
+Route::get('user/{id}/delete','UserController@delete');
