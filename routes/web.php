@@ -22,3 +22,12 @@ Route::get('create-user','UserController@create');
 Route::get('user','UserController@index');
 Route::get('user/{id}','UserController@show');
 Route::get('user/{id}/delete','UserController@delete');
+Route::post('add-user','UserController@store');
+
+Route::put('update-user','UserController@update');
+
+Route::prefix('admin')->group(function(){
+    Route::get('hello',function(){
+        return "Hello";
+    });
+});

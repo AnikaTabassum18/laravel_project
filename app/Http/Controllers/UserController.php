@@ -15,18 +15,28 @@ class UserController extends Controller
         $users = User::find($id);
         return $users;
     }
-    public function create(){
-    $data = [
-        'name' => 'Anika Tabassum',
-        'email' => 'anika@gmail.com',
-        'password' => '123456'
-    ];
-        User::create($data);
-        return 'Create Successfully';
-    }
+    // public function create(){
+    // $data = [
+    //     'name' => 'Anika Tabassum',
+    //     'email' => 'anika@gmail.com',
+    //     'password' => '123456'
+    // ];
+    //     User::create($data);
+    //     return 'Create Successfully';
+    // }
     public function delete($id){
         $user = User::findOrFail($id);
         $user->delete();
         return 'Delete';
+    }
+    public function create()
+    {
+        return view('create_user');
+    }
+    public function store(){
+        return 'here';
+    }
+    public function update(){
+        return 'Update';
     }
 }

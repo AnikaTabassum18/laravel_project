@@ -2,6 +2,6 @@ git init
 git status
 git add .
 git commit -m ""
-git branch -M main
+git branch -M trial
 git remote add origin https://github.com/AnikaTabassum18/laravel_project.git
 git push -u origin main
