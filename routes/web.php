@@ -31,3 +31,22 @@ Route::prefix('admin')->group(function(){
         return "Hello";
     });
 });
+
+Route::get('create_customer', function(){
+    DB::table('customers')->insert(
+        ['name'=> 'Anika Tabassum', 'email'=> 'anika@gmail.com', 'address'=>'Dhaka']
+    );
+});
+
+Route::get('add_customer', function(){
+    $data = [
+        'name'=> 'Homayra',
+        'email'=> 'homayra@gmail.com', 
+        'address'=>'Dhaka'
+    ];
+    
+    DB::table('customers')->insert($data);
+});
+
+
+Route::get('customers', 'CustomerController@index');
